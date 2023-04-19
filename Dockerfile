@@ -1,9 +1,7 @@
-FROM python:alpine
+FROM node:alpine
 
 WORKDIR /app
 
-RUN pip install pymongo
-
 COPY . .
 
-CMD [ "python", "main.py" ]
+CMD [ "node", "index.mjs" ]
